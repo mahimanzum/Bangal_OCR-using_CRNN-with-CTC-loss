@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 import PIL.ImageOps 
 fonts = ImageFont.truetype('SutonnyOMJ.ttf',20, layout_engine=ImageFont.LAYOUT_RAQM)
 char = 'দৃষ্টিভঙ্গি '
+idx = 3
 f = open("BCC_out.txt", "r")
 char2 = ""
 c = 0
@@ -14,8 +15,9 @@ for x in f:
 	char2 += str(comb)
 	print_list.append(comb)
 	#print(char2)
-	if(c == 20):
+	if(c == 5):
 		break
+char2 =  print_list[idx]
 print(char2)
 im = Image.new("RGB",(1000, 1600))
 im2 = Image.new("RGB",(1000, 1600))
@@ -34,20 +36,12 @@ y = 8
 w = 0
 h = 0
 draw_txt = ImageDraw.Draw(im2)
-curr = ""
-prev = ""
-idx = 5
-for i in range(c):
-	curr+=print_list[i]
-	width = fonts.getsize(curr)[0]-fonts.getsize(prev)[0]
-	height = fonts.getsize(curr)[1]
-	prev = curr
-	#width, height = draw_txt.textsize(print_list[i], font=fonts)
-	if(idx==i):
-		cv2.rectangle(img, (x,y), (x+width+2,y+height+1), (200, 0,255), 1)	
-	x = x+width
-	#y = y+height
-	print(width, height)
+width, height = fonts.getsize(print_list[idx])
+#width, height = draw_txt.textsize(print_list[i], font=fonts)
+cv2.rectangle(img, (x,y), (x+width,y+height+2), (200, 0,255), 1)	
+x = x+width
+#y = y+height
+print(width, height)
 
 #cv2.imshow('image',img)
 cv2.imwrite(name, img)

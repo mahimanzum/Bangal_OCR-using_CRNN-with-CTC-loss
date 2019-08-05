@@ -1,4 +1,4 @@
-f = open("BCC.txt", "r")
+f = open("sBCC.txt", "r")
 lst = []
 st = set()
 for x in f:
@@ -11,7 +11,7 @@ for x in f:
 			st.add(comp)
 			
 print(len(lst))
-with open('BCC_out.txt', 'w') as f:
+with open('sBCC_out.txt', 'w') as f:
 	for item in st:
 		it = item
 		it = it.replace(" ","")

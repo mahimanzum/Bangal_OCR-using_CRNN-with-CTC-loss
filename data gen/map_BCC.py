@@ -8,7 +8,7 @@ def load_obj(name):
     with open(name + '.pkl', 'rb') as f:
         return pickle.load(f)
 
-f = open("BCC_out.txt", "r")
+f = open("sBCC_out.txt", "r")
 print_list = []
 st = set()
 for x in f:
@@ -17,7 +17,6 @@ for x in f:
     if(s not in st):
         st.add(s)
         print_list.append(s)
-
 print(len(print_list))
 f.close()
 BCC_map = {}

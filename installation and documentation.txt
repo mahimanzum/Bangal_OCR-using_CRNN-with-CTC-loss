@@ -1,0 +1,17 @@
+libraQM installation is necessary for complex text rendering 
+sudo pip3 install Pillow -> installs 5.4.1
+sudo apt-get install libfreetype6-dev libharfbuzz-dev libfribidi-dev gtk-doc-tools
+Install libraqm as described here (using configure, make, make install) ./autogen.sh give sudo if necessary like sudo make
+sudo ldconfig This step was needed!
+Run the following test script: (Make sure the fonts are installed sudo apt install fonts-indic)
+
+
+sudo apt-get install libtool
+apt-get install autoconf
+
+follow those links if anything goes wrong or libraqm doesn't work
+https://github.com/python-pillow/Pillow/issues/3593
+https://github.com/HOST-Oman/libraqm
+https://github.com/HOST-Oman/libraqm.git
+
+https://stackoverflow.com/questions/18978252/error-libtool-library-used-but-libtool-is-undefined

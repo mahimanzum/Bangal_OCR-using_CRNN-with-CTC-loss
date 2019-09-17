@@ -1,0 +1,10 @@
+Blogs:
+
+(1)(chinese text in the wild) http://xiaofengshi.com/2019/01/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-TextDetection/
+(2) https://nanonets.com/blog/attention-ocr-for-text-recogntion/#dram-deep-recurrent-attention-model
+
+Codes:
+
+(1) https://github.com/xiaofengShi/CHINESE-OCR
+(2) (this one is acually used and modified for bvangla in my model) https://www.dlology.com/blog/how-to-train-a-keras-model-to-recognize-variable-length-text/
+(3) (Chinese text baseline code) https://github.com/mahimanzum/ctw-baseline
